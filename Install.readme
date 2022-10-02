@@ -1,0 +1,50 @@
+1. Copy "balkon.py" to your Homebridge-Server and modify the following values:
+
+a) the AIN of your device, for example AIN = "123456"
+AIN = "..."     
+
+b) the max. wattpeak of your power-plant, for example WATTPEAK=600
+WATTPEAK = xyz    
+
+c) the filenames of the output-data
+WATTPCT_DAT = "wattpct.dat"
+TEMPERATURE_DAT = "temperature.dat"
+
+d) the data of your Fritz!Box
+url = "http://fritz.box/"
+
+e) credentials to logon to Fritz!Box
+username = "<user>"
+password = "<password>"
+
+
+****************************
+
+
+2. try the script by entering the command "python balkon.py"
+
+a) there should be an output on the screen:
+
+watt:162.73
+wattpct:27.12
+temperature:14.5
+
+b) there are 2 files in your filesystem:
+wattpct.dat
+temeprature.dat
+
+
+****************************
+
+
+3. if this is working install a "cronjob" to execute this command periodically
+
+
+****************************
+
+
+4. the content of the 2 files can be used in Homebridge with the Plugin "Homebridge Temperature Humidity Sensor File" 
+
+I am using the "humidity-sensor" to display the energy since there is no energy-sensor available.
+
+****************************
